@@ -27,7 +27,7 @@ const Footer = () => {
           <div className="space-y-6">
             <img src={img} alt="PSIT SIF Logo" className="w-24" />
             <div className="space-y-4">
-              <h2 className="text-xl font-semibold">Startup & Incubation Foundation</h2>
+              <h2 className="text-xl font-semibold text-gray-300">Startup & Incubation Foundation</h2>
               <p className="text-gray-300">
                 Empowering Innovators, Fueling Growth. We are dedicated to nurturing innovative startups
                 and fostering entrepreneurial growth through mentorship, resources, and networking opportunities.
@@ -50,7 +50,7 @@ const Footer = () => {
 
           {/* Quick Links */}
           <div className="space-y-4">
-            <h3 className="text-lg font-semibold">Quick Links</h3>
+            <h3 className="text-lg font-semibold text-gray-300">Quick Links</h3>
             <ul className="space-y-2">
               {quickLinks.map((link, index) => (
                 <li key={index}>
@@ -67,7 +67,7 @@ const Footer = () => {
 
           {/* Contact Information */}
           <div className="space-y-4">
-            <h3 className="text-lg font-semibold">Get In Touch</h3>
+            <h3 className="text-lg font-semibold text-gray-300">Get In Touch</h3>
             <div className="space-y-2">
               <p className="flex items-center text-gray-300">
                 <span className="font-medium">Phone:</span>

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronLeft, ChevronRight, Stars } from 'lucide-react';
@@ -11,55 +11,78 @@ import room from "../assets/banner/room.jpg";
 import innovationAction from "../assets/banner/innovation_action.png";
 import receptionReal from "../assets/facilities/receptionReal.png";
 
+const SLIDE_DURATION = 6000;
+const TRANSITION_DURATION = 0.8;
+
+const slides = [
+  {
+    image: receptionReal,
+    title: "World-Class Incubation Infrastructure",
+    description: "Step into a premium ecosystem designed to nurture the next generation of global innovators and entrepreneurs."
+  },
+  {
+    image: innovationAction,
+    title: "Innovation in Action",
+    description: "Collaborative environments where student-led startups transform visionary ideas into functional prototypes."
+  },
+  {
+    image: room,
+    title: "Vibrant Ecosystem",
+    description: "Nurturing breakthrough ideas with world-class resources and specialized technical mentorship."
+  }
+];
+
 const MissionSection = () => {
-  const slides = [
-    {
-      image: receptionReal,
-      title: "World-Class Incubation Infrastructure",
-      description: "Step into a premium ecosystem designed to nurture the next generation of global innovators and entrepreneurs."
-    },
-    {
-      image: innovationAction,
-      title: "Innovation in Action",
-      description: "Collaborative environments where student-led startups transform visionary ideas into functional prototypes."
-    },
-    {
-      image: room,
-      title: "Vibrant Ecosystem",
-      description: "Nurturing breakthrough ideas with world-class resources and specialized technical mentorship."
-    }
-  ];
-
   const [currentIndex, setCurrentIndex] = useState(0);
+  // Track a unique key for each slide transition so AnimatePresence always sees a fresh element
+  const [slideKey, setSlideKey] = useState(0);
+  const timerRef = useRef(null);
 
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setCurrentIndex((prev) => (prev + 1) % slides.length);
-    }, 6000);
-    return () => clearInterval(timer);
+  const goToSlide = useCallback((index) => {
+    setCurrentIndex(index);
+    setSlideKey((prev) => prev + 1);
   }, []);
 
-  const nextSlide = () => setCurrentIndex((prev) => (prev + 1) % slides.length);
-  const prevSlide = () => setCurrentIndex((prev) => (prev - 1 + slides.length) % slides.length);
+  const nextSlide = useCallback(() => {
+    goToSlide((currentIndex + 1) % slides.length);
+  }, [currentIndex, goToSlide]);
+
+  const prevSlide = useCallback(() => {
+    goToSlide((currentIndex - 1 + slides.length) % slides.length);
+  }, [currentIndex, goToSlide]);
+
+  // Auto-advance using setTimeout (not setInterval) so each cycle resets cleanly
+  useEffect(() => {
+    timerRef.current = setTimeout(() => {
+      setCurrentIndex((prev) => (prev + 1) % slides.length);
+      setSlideKey((prev) => prev + 1);
+    }, SLIDE_DURATION);
+
+    return () => {
+      if (timerRef.current) {
+        clearTimeout(timerRef.current);
+      }
+    };
+  }, [currentIndex]);
 
   return (
     <section className="relative w-full h-[650px] sm:h-[750px] overflow-hidden bg-slate-950">
-      <AnimatePresence mode="wait">
+      <AnimatePresence mode="popLayout">
         <motion.div
-          key={currentIndex}
+          key={slideKey}
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
-          transition={{ duration: 1, ease: "easeInOut" }}
+          transition={{ duration: TRANSITION_DURATION, ease: "easeInOut" }}
           className="absolute inset-0 w-full h-full image-container !border-0 !rounded-none !shadow-none"
         >
           {/* Background Image with Ken Burns effect */}
           <motion.img
-            initial={{ scale: 1.1 }}
+            initial={{ scale: 1.05 }}
             animate={{ scale: 1 }}
-            transition={{ duration: 6 }}
+            transition={{ duration: SLIDE_DURATION / 1000, ease: "linear" }}
             src={slides[currentIndex].image}
-            className="absolute inset-0 w-full h-full object-cover hero-image"
+            className="absolute inset-0 w-full h-full object-cover object-center hero-image"
             alt={slides[currentIndex].title}
             fetchpriority="high"
             decoding="async"
@@ -123,13 +146,25 @@ const MissionSection = () => {
       {/* Navigation Indicators (Progress Bar Style) */}
       <div className="absolute bottom-12 left-4 sm:left-8 lg:left-24 z-30 flex gap-3 w-48 sm:w-64">
         {slides.map((_, idx) => (
-          <div key={idx} className="h-1 flex-1 bg-white/20 rounded-full overflow-hidden cursor-pointer" onClick={() => setCurrentIndex(idx)}>
-            <motion.div
-              initial={{ width: 0 }}
-              animate={{ width: currentIndex === idx ? "100%" : currentIndex > idx ? "100%" : "0%" }}
-              transition={{ duration: currentIndex === idx ? 6 : 0, ease: "linear" }}
-              className="h-full bg-green-600"
-            />
+          <div
+            key={idx}
+            className="h-1 flex-1 bg-white/20 rounded-full overflow-hidden cursor-pointer"
+            onClick={() => goToSlide(idx)}
+          >
+            {currentIndex === idx ? (
+              <motion.div
+                key={`progress-${slideKey}`}
+                initial={{ width: "0%" }}
+                animate={{ width: "100%" }}
+                transition={{ duration: SLIDE_DURATION / 1000, ease: "linear" }}
+                className="h-full bg-green-600"
+              />
+            ) : (
+              <div
+                className="h-full bg-green-600 transition-all duration-300"
+                style={{ width: currentIndex > idx ? "100%" : "0%" }}
+              />
+            )}
           </div>
         ))}
       </div>
@@ -154,3 +189,4 @@ const MissionSection = () => {
 };
 
 export default MissionSection;
+

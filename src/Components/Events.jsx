@@ -175,7 +175,7 @@ const Event = () => {
                     initial={{ y: 20, opacity: 0 }}
                     animate={{ y: 0, opacity: 1 }}
                     transition={{ delay: 0.3 }}
-                    className="text-4xl md:text-5xl font-bold mb-4 font-outfit"
+                    className="text-4xl md:text-5xl font-bold mb-4 font-outfit text-slate-300"
                   >
                     {showcaseImages[currentSlide].title}
                   </motion.h3>
@@ -183,7 +183,7 @@ const Event = () => {
                     initial={{ y: 20, opacity: 0 }}
                     animate={{ y: 0, opacity: 1 }}
                     transition={{ delay: 0.4 }}
-                    className="text-lg md:text-xl text-gray-200 font-medium"
+                    className="text-lg md:text-xl text-slate-300 font-medium"
                   >
                     {showcaseImages[currentSlide].description}
                   </motion.p>

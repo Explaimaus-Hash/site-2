@@ -10,7 +10,7 @@ export const Card = React.memo(({ card, index, hovered, setHovered }) => (
     className={cn(
       "rounded-lg relative bg-white overflow-hidden transition-all duration-300 ease-out",
       hovered !== null && hovered !== index && "blur-sm scale-[0.98]",
-      "w-full h-40 md:h-48" 
+      "w-full h-72 md:h-96"
     )}
   >
     <img
@@ -20,14 +20,14 @@ export const Card = React.memo(({ card, index, hovered, setHovered }) => (
     />
     <div
       className={cn(
-        "absolute inset-0 bg-black/50 flex flex-col justify-start py-4 px-4 transition-opacity duration-300",
+        "absolute inset-0 bg-black/65 flex flex-col justify-start py-6 px-6 transition-opacity duration-300",
         hovered === index ? "opacity-100" : "opacity-0"
       )}
     >
-      <div className="text-xl md:text-2xl font-medium text-white">
+      <div className="text-xl md:text-2xl font-bold text-white mb-3">
         {card.title}
       </div>
-      <div className="text-sm text-white mt-2">
+      <div className="text-sm md:text-base text-gray-200 leading-relaxed">
         {card.description}
       </div>
     </div>
