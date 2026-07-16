@@ -18,6 +18,10 @@ import cnc from '../assets/facilities/cnc.png';
 import printer3d from '../assets/facilities/3dprinter.png';
 
 import cuttingEdgeResearch from '../assets/facilities/cutting_edge_research.jpg';
+import cuttingEdgeResearch2 from "../assets/images/2f42e82e-0a59-4023-a28a-994cc835657a.jpg";
+
+import gdr1 from "../assets/images/91793134-5c91-4503-b601-83aaba50deef.jpg"
+import gdr2 from "../assets/images/5abee3a6-f056-41fe-8ca5-955d14a5ae33.jpg"
 
 // New Real Gallery Images
 import facilityDesk1 from '../assets/facilities/facility_desk1.jpg';
@@ -41,11 +45,11 @@ const facilities = [
     { 
         title: "Cutting-edge Research Space", 
         description: "Equipped with modern tools and technologies for advanced research and development.", 
-        images: [labBenchReal, facilityLabPc, cuttingEdgeResearch] 
+        images: [labBenchReal, facilityLabPc, cuttingEdgeResearch, cuttingEdgeResearch2] 
     },
-    { title: "Group Discussion Room", description: "A collaborative space designed for team meetings and brainstorming sessions.", image: conferenceTableWide },
-    { title: "Library", description: "A vast collection of books, research papers, and digital resources for academic enrichment.", image: library },
-    { title: "Conference Hall", description: "Spacious hall for seminars, guest lectures, and industry interactions.", image: startupRoom },
+    { title: "Group Discussion Room", description: "A collaborative space designed for team meetings and brainstorming sessions.", images: [conferenceTableWide, gdr1, gdr2, library] },
+    { title: "Library", description: "A vast collection of books, research papers, and digital resources for academic enrichment.", images: [library, conferenceTableWide, conferenceHall, gdr1] },
+    { title: "Conference Hall", description: "Spacious hall for seminars, guest lectures, and industry interactions.", images: [startupRoom, gdr1, gdr2, library] },
     { 
         title: "Computer Lab", 
         description: "State-of-the-art systems for programming, simulations, and research.", 

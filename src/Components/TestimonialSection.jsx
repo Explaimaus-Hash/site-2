@@ -1,7 +1,7 @@
 import React from 'react';
 import img1 from "../assets/download.jpg"
 import img2 from "../assets/download (1).jpg"
-import img3 from "../assets/raghvendra_sir.webp"
+import img3 from "../assets/raghvendra_sir_cropped.jpg"
 import img4 from "../assets/raguraj.jpg"
 const TestimonialSection = () => {
   const testimonials = [

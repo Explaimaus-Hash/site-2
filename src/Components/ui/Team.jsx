@@ -3,7 +3,7 @@ import img from "../../assets/laww.jpg";
 import sandeep from "../../assets/team/sandeep.jpeg";
 import anurag from "../../assets/team/anurag.jpeg";
 import vijay from "../../assets/team/vijay.jpeg";
-import rajat from '../../assets/team/rajat_verma.jpg';
+import rajat from '../../assets/team/photos/rajat_sir.jpg';
 
 function Team() {
   const teamMembers = [
@@ -43,12 +43,14 @@ function Team() {
 
       <div className="members bg-white pb-5 mt-2">
         <div className="flex flex-col md:flex-row font-medium justify-center gap-8 md:gap-x-24 mt-6 py-6 px-4 mb-2">
-          {teamMembers.map((member, index) => (
-            <div key={index} className="card text-center">
-              <img className="p-1 w-48 h-48 rounded-full mx-auto" src={member.image} alt={member.name} />
-              <p className="text-slate-700 dark:text-slate-500 text-lg mt-2">{member.name}</p>
-            </div>
-          ))}
+{teamMembers.map((member, index) => (
+  <div key={index} className="card text-center">
+    <div className="p-1 max-w-48 max-h-48 w-full h-full mx-auto aspect-square overflow-hidden rounded-full"> 
+      <img className="w-full h-full object-cover" src={member.image} alt={member.name} />
+    </div>
+    <p className="text-slate-700 dark:text-slate-500 text-lg mt-2">{member.name}</p>
+  </div>
+))}
         </div>
 
 
