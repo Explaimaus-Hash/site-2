@@ -7,7 +7,7 @@ import expo from "../assets/banner/expo.jpg";
 import expo2 from "../assets/banner/expo2.jpg";
 import gokart from "../assets/banner/gokart.jpg";
 import incub from "../assets/banner/incub.jpg";
-import room from "../assets/banner/room.jpg";
+import room from "../assets/banner/room.jpeg";
 import innovationAction from "../assets/banner/innovation_action.png";
 import receptionReal from "../assets/facilities/receptionReal.png";
 

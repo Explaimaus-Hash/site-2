@@ -15,7 +15,7 @@ import startup3 from '../assets/facilities/startup3.png';
 // Workstation images
 import server_rack from '../assets/facilities/server_rack.jpg';
 import workstation from '../assets/facilities/workstation.png';
-import cnc from '../assets/facilities/cnc.png';
+import cnc from '../assets/facilities/cnc.jpeg';
 import printer3d from '../assets/facilities/3dprinter.png';
 
 import cuttingEdgeResearch from '../assets/facilities/cutting_edge_research.jpg';
@@ -33,7 +33,7 @@ import facilityMeeting from '../assets/facilities/facility_meeting.jpg';
 
 // Newly added real photos
 import teamworkTable from '../assets/facilities/teamworkTable.png';
-import printer3dReal from '../assets/facilities/printer3dReal.png';
+import printer3dReal from '../assets/facilities/printer3dReal.jpeg';
 import labBenchReal from '../assets/facilities/labBenchReal.png';
 import conferenceTableWide from '../assets/facilities/conferenceTableWide.png';
 
@@ -48,9 +48,9 @@ const facilities = [
         description: "Equipped with modern tools and technologies for advanced research and development.",
         images: [labBenchReal, facilityLabPc, cuttingEdgeResearch, cuttingEdgeResearch2]
     },
-    { title: "Group Discussion Room", description: "A collaborative space designed for team meetings and brainstorming sessions.", images: [conferenceTableWide, gdr1, gdr2, library] },
-    { title: "Library", description: "A vast collection of books, research papers, and digital resources for academic enrichment.", images: [library, conferenceTableWide, conferenceHall, gdr1] },
-    { title: "Conference Hall", description: "Spacious hall for seminars, guest lectures, and industry interactions.", images: [startupRoom, gdr1, gdr2, library] },
+    { title: "Group Discussion Room", description: "A collaborative space designed for team meetings and brainstorming sessions.", images: [conferenceTableWide, gdr1, gdr2] },
+    { title: "Library", description: "A vast collection of books, research papers, and digital resources for academic enrichment.", images: [library , gdr1] },
+    { title: "Conference Hall", description: "Spacious hall for seminars, guest lectures, and industry interactions.", images: [startupRoom, gdr1, gdr2] },
     {
         title: "Computer Lab",
         description: "State-of-the-art systems for programming, simulations, and research.",
