@@ -29,6 +29,16 @@ const ProgramPartners = () => {
         "Enterprise support",
         "National development"
       ]
+    },
+    {
+      image: img3,
+      title: "Start in UP",
+      description: "UP Government's startup initiative",
+      benefits: [
+        "State-level startup support",
+        "Policy-driven innovation",
+        "Entrepreneurial growth"
+      ]
     }
   ];
 
@@ -51,24 +61,19 @@ const ProgramPartners = () => {
       description: "Connecting startups with potential customers, partners, and investors. Helping ventures scale their operations and expand their market presence through our extensive network.",
       number: "03"
     },
-    {
-      src: img3,
-      title: "StartinUp",
-      description: "Fostering partnerships between academia and industry to drive innovation. Creating opportunities for collaborative research and development in priority sectors.",
-      number: "04"
-    },
+
     {
       src: img5,
       title: "InnovationHub",
       description: "Fostering partnerships between academia and industry to drive innovation. Creating opportunities for collaborative research and development in priority sectors.",
-      number: "05"
+      number: "04"
     }
   ];
 
   return (
     <div>
       {/* Strategic Partners Section */}
-      <div className="py-16 bg-gray-50">
+      <div id="strategic-partners" className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="heading mb-10">
             <h2 className="flex justify-center font-semibold text-5xl text-black pb-5">
@@ -79,7 +84,7 @@ const ProgramPartners = () => {
             </div>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-12">
+          <div className="grid md:grid-cols-3 gap-10">
             {strategicPartners.map((program, index) => (
               <div
                 key={index}
@@ -141,7 +146,7 @@ const ProgramPartners = () => {
           </p>
         </div> */}
 
-        <div className="pb-[100px] pt-5 ml-10 mr-10 ">
+        <div className="pb-[100px] pt-5 px-6 sm:px-12 lg:px-20">
           <FocusCards cards={ecosystemCards} />
         </div>
 

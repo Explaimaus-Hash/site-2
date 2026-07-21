@@ -7,7 +7,19 @@ const Footer = () => {
   const quickLinks = [
     { name: "Home", path: "/" },
     { name: "About", path: "/about" },
+    { name: "Our Events", path: "#our-events" },
+    { name: "Strategic Partners", path: "#strategic-partners" },
   ];
+
+  const handleQuickLinkClick = (e, path) => {
+    if (path.startsWith("#")) {
+      e.preventDefault();
+      const el = document.getElementById(path.substring(1));
+      if (el) {
+        el.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+  };
 
   const socialLinks = [
     { icon: faFacebookF, url: "https://www.facebook.com/psitkanpur2004" },
@@ -53,6 +65,7 @@ const Footer = () => {
                 <li key={index}>
                   <a
                     href={link.path}
+                    onClick={(e) => handleQuickLinkClick(e, link.path)}
                     className="text-gray-300 hover:text-white transition-colors duration-200"
                   >
                     {link.name}

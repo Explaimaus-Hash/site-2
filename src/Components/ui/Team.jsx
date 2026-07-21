@@ -10,13 +10,13 @@ import lavit from '../../assets/team/lavit.jpg'
 
 function Team() {
   const teamMembers = [
-    { name: "Dr. Nand Kishore Sharma", image: nandkishore },
-    { name: "Dr. Rajat Verma", image: rajat },
-    { name: "Mr. Deepak Gupta", image: deepak },
-    { name: "Mr. Anurag Dhawan", image: anurag },
-    { name: "Mr. Sandeep Kumar Khare ", image: sandeep },
-    { name: "Mr. Vijay Kumar Yadav", image: vijay },
-    { name: "Mr. Lavit Sahu", image: lavit },
+    { name: "Nand Kishore Sharma", position: "Head of Department", image: nandkishore },
+    { name: "Rajat Verma", position: "Additional Head of Department", image: rajat },
+    { name: "Deepak Gupta", position: "Additional Head of Department", image: deepak },
+    { name: "Anurag Dhawan", position: "CEO of E-Cell", image: anurag },
+    { name: "Sandeep Kumar Khare", position: "Technical Incubation Associate", image: sandeep },
+    { name: "Vijay Kumar Yadav", position: "Incubation Associate", image: vijay },
+    { name: "Lavit Sahu", position: "Incubation Associate", image: lavit },
   ];
 
   /*  // State to manage the current carousel index
@@ -77,12 +77,17 @@ function Team() {
               </div>
 
               {/* Name */}
-              <p className="mt-4 text-slate-800 font-semibold text-lg tracking-tight transition-colors duration-300 group-hover:text-emerald-700">
+              <p className="mt-4 text-slate-800 font-semibold text-lg tracking-tight text-center transition-colors duration-300 group-hover:text-emerald-700">
                 {member.name}
               </p>
 
+              {/* Position — small grey text below the name */}
+              <p className="mt-1 text-gray-400 text-xs font-normal tracking-wide text-center">
+                {member.position}
+              </p>
+
               {/* Subtle underline accent on hover */}
-              <div className="mt-1 h-0.5 w-0 bg-gradient-to-r from-green-400 to-emerald-600 rounded-full transition-all duration-500 group-hover:w-16" />
+              <div className="mt-1.5 h-0.5 w-0 bg-gradient-to-r from-green-400 to-emerald-600 rounded-full transition-all duration-500 group-hover:w-16" />
             </div>
           ))}
         </div>

@@ -201,9 +201,6 @@ const MiddleSection = () => {
                 <div className="p-6 flex flex-col flex-grow">
                   <h3 className="text-2xl font-bold font-outfit mb-3 text-slate-900 dark:text-[#e6edf3] border-l-[1px] border-green-600 pl-3">{banner.title}</h3>
                   <p className="text-slate-500 dark:text-[#8b949e] text-sm leading-relaxed font-medium mb-4 flex-grow">{banner.subtitle}</p>
-                  <a href="#" className="text-green-700 font-bold text-sm inline-flex items-center hover:text-green-800 transition-colors mt-auto w-max">
-                    Learn More <ArrowRight className="w-4 h-4 ml-1" />
-                  </a>
                 </div>
               </motion.div>
             ))}

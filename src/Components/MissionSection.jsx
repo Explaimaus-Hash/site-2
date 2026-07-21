@@ -10,6 +10,7 @@ import incub from "../assets/banner/incub.jpg";
 import room from "../assets/banner/room.jpeg";
 import innovationAction from "../assets/banner/innovation_action.png";
 import receptionReal from "../assets/facilities/receptionReal.png";
+import cncBig from "../assets/facilities/cnc_big.png";
 
 const SLIDE_DURATION = 6000;
 const TRANSITION_DURATION = 0.8;
@@ -29,6 +30,11 @@ const slides = [
     image: room,
     title: "Vibrant Ecosystem",
     description: "Nurturing breakthrough ideas with world-class resources and specialized technical mentorship."
+  },
+  {
+    image: cncBig,
+    title: "Advanced Prototyping & Fabrication",
+    description: "Equipped with state-of-the-art precision machinery to help innovators build market-ready hardware prototypes."
   }
 ];
 
@@ -131,9 +137,9 @@ const MissionSection = () => {
                 transition={{ delay: 0.6 }}
                 className="mt-12 flex flex-wrap gap-4 relative z-50 pointer-events-auto"
               >
-                <Link to="/about" className="btn-primary flex items-center justify-center ripple">
+                <a href="#strategic-partners" onClick={(e) => { e.preventDefault(); document.getElementById('strategic-partners')?.scrollIntoView({ behavior: 'smooth' }); }} className="btn-primary flex items-center justify-center ripple">
                   Explore Programs
-                </Link>
+                </a>
                 <a href="#footer-id" className="px-8 py-3.5 rounded-xl border border-white text-white font-bold hover:bg-white hover:text-slate-900 dark:border-[2px] dark:border-[rgba(255,255,255,0.8)] dark:backdrop-blur-[4px] transition-all duration-300 flex items-center justify-center ripple">
                   Contact Us
                 </a>
