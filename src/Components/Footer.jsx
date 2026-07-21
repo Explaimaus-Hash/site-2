@@ -72,7 +72,7 @@ const Footer = () => {
               <p className="flex items-center text-gray-300">
                 <span className="font-medium">Phone:</span>
                 <a href="tel:+918348911311" className="ml-2 hover:text-white transition-colors duration-200">
-                  +91-7670998888
+                  +91 89605 10510
                 </a>
               </p>
               <p className="flex items-center text-gray-300">
@@ -84,7 +84,7 @@ const Footer = () => {
               <p className="text-gray-300">
                 <span className="font-medium">Address:</span>
                 <span className="ml-2">
-                  PSIT Campus, Kanpur, Uttar Pradesh
+                  Pranveer Singh Institute of Technology NH 19, Bhauti - Kanpur - 209305 Uttar Pradesh, India
                 </span>
               </p>
             </div>
