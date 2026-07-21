@@ -134,7 +134,7 @@ const MissionSection = () => {
                 <Link to="/about" className="btn-primary flex items-center justify-center ripple">
                   Explore Programs
                 </Link>
-                <a href="mailto:sif@psit.in" className="px-8 py-3.5 rounded-xl border border-white text-white font-bold hover:bg-white hover:text-slate-900 dark:border-[2px] dark:border-[rgba(255,255,255,0.8)] dark:backdrop-blur-[4px] transition-all duration-300 flex items-center justify-center ripple">
+                <a href="#footer-id" className="px-8 py-3.5 rounded-xl border border-white text-white font-bold hover:bg-white hover:text-slate-900 dark:border-[2px] dark:border-[rgba(255,255,255,0.8)] dark:backdrop-blur-[4px] transition-all duration-300 flex items-center justify-center ripple">
                   Contact Us
                 </a>
               </motion.div>

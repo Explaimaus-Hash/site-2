@@ -6,18 +6,17 @@ import vijay from "../../assets/team/vijay.jpeg";
 import rajat from '../../assets/team/rajat sir.jpg';
 import nandkishore from '../../assets/team/nandkishore.jpg';
 import deepak from '../../assets/team/deepak.jpeg';
+import lavit from '../../assets/team/lavit.jpg'
 
 function Team() {
   const teamMembers = [
-    { name: "Dr. Rajat Verma", image: rajat },
     { name: "Dr. Nand Kishore Sharma", image: nandkishore },
+    { name: "Dr. Rajat Verma", image: rajat },
     { name: "Mr. Deepak Gupta", image: deepak },
     { name: "Mr. Anurag Dhawan", image: anurag },
     { name: "Mr. Sandeep Kumar Khare ", image: sandeep },
     { name: "Mr. Vijay Kumar Yadav", image: vijay },
-
-
-
+    { name: "Mr. Lavit Sahu", image: lavit },
   ];
 
   /*  // State to manage the current carousel index

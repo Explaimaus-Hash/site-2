@@ -6,7 +6,7 @@ import wear from '../assets/wear.jpg';
 const ThrustAreas = () => {
     const thrustAreas = [
         { title: "CS & Software Engineering", description: "Exploring modern software development, system architecture, and best practices.", image: cse },
-        { title: "AI/ML", description: "Advancing artificial intelligence and machine learning research and applications.", image: aiml },
+        { title: "AI/ML", description: "Advancing artificial intelligence and machine learning research.", image: aiml },
         { title: "Wearable Devices", description: "Innovating in the field of smart wearables and health monitoring technologies.", image: wear }
     ];
 

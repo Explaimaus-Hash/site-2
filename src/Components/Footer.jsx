@@ -7,9 +7,6 @@ const Footer = () => {
   const quickLinks = [
     { name: "Home", path: "/" },
     { name: "About", path: "/about" },
-    { name: "Services", path: "/services" },
-    { name: "Programs", path: "/programs" },
-    { name: "Contact", path: "/contact" }
   ];
 
   const socialLinks = [
@@ -20,7 +17,7 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="bg-blue-950 text-white mt-9">
+    <footer className="bg-blue-950 text-white mt-9" id="footer-id">
       <div className="max-w-7xl mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-[2fr_1fr_1fr] gap-8 py-12">
           {/* Main Content */}
@@ -77,8 +74,8 @@ const Footer = () => {
               </p>
               <p className="flex items-center text-gray-300">
                 <span className="font-medium">Email:</span>
-                <a href="mailto:psit@gmail.com" className="ml-2 hover:text-white transition-colors duration-200">
-                  psit@gmail.com
+                <a href="mailto:anurag.dhawan@psit.ac.in" className="ml-2 hover:text-white transition-colors duration-200">
+                  anurag.dhawan@psit.ac.in
                 </a>
               </p>
               <p className="text-gray-300">

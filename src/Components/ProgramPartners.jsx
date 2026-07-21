@@ -36,13 +36,13 @@ const ProgramPartners = () => {
     {
       src: img1,
       title: "NIDHI-DST ITBI",
-      description: "The National Initiative for Developing and Harnessing Innovations (NIDHI) is a flagship program under the Department of Science and Technology (DST), Government of India. It supports innovations addressing societal challenges and fostering entrepreneurship. A key component is the Innovation and Technology Business Incubator (ITBI).",
+      description: "The National Initiative for Developing and Harnessing Innovations (NIDHI) is a flagship program under the Department of Science and Technology (DST), Government of India. It supports innovations addressing societal challenges and fostering entrepreneurship.",
       number: "01"
     },
     {
       src: img2,
       title: "MSME",
-      description: "The Ministry of Micro, Small, and Medium Enterprises (MSME) is a key government body in India responsible for the development and promotion of the Micro, Small, and Medium Enterprises (MSME) sector. This sector plays a vital role in India's economy by contributing significantly to employment generation, export promotion, and overall industrial development",
+      description: "The Ministry of Micro, Small, and Medium Enterprises (MSME) is a key government body in India responsible for the development and promotion of the Micro, Small, and Medium Enterprises (MSME) sector.",
       number: "02"
     },
     {
@@ -89,11 +89,11 @@ const ProgramPartners = () => {
                   <img
                     src={program.image}
                     alt={program.title}
-                    className="w-full h-full object-contain grayscale group-hover:grayscale-0 transition-all duration-300"
+                    className="w-full h-full object-contain transition-all duration-300"
                   />
                 </div>
                 <div className="space-y-4">
-                  <h3 className="text-3xl font-bold text-gray-900 group-hover:text-green-600 transition-colors">
+                  <h3 className="text-3xl font-bold text-gray-900 transition-colors">
                     {program.title}
                   </h3>
 

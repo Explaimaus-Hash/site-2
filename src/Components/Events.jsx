@@ -10,8 +10,8 @@ import img7 from "../assets/events/IPR2.jpeg"
 
 // New event photos
 import elevate26 from "../assets/banner/audi.jpg"
-import drone from "../assets/events/drone.jpg"
-import presentation from "../assets/events/presentation.jpg"
+import drone from "../assets/events/dron_high_res.jpg"
+import presentation from "../assets/events/presentation_high_res.jpg"
 
 // Official Event Posters
 import startupCharcha5 from "../assets/events/startup_charcha_5.jpg"
@@ -19,6 +19,7 @@ import startupCharcha4 from "../assets/events/startup_charcha_4.jpg"
 import startupCharcha3 from "../assets/events/startup_charcha_3.jpg"
 import startupCharcha2 from "../assets/events/startup_charcha_2.jpg"
 import hustlersNew from "../assets/events/hustlers_new.png"
+import thrive25 from "../assets/events/thrive25.jpg"
 
 const showcaseImages = [
   { url: elevate26, title: "ELEVATE '26 Startup Conclave", description: "Bringing together visionaries and investors to shape the future of innovation." },
@@ -59,7 +60,8 @@ const FeaturedEventCard = ({ event, index }) => {
 };
 
 const GridEventCard = ({ event, index }) => {
-  const isReverted = index === 0 || index === 3 || index === 4;
+  // const isReverted = index === 0 || index === 1 || index === 4 || index === 5;
+  const isReverted = true;
   return (
     <motion.div
       initial={{ opacity: 0, y: 30 }}
@@ -103,6 +105,11 @@ const Event = () => {
   const prevSlide = () => setCurrentSlide((prev) => (prev - 1 + showcaseImages.length) % showcaseImages.length);
 
   const events = [
+    {
+      image: thrive25,
+      title: 'Thrive 25',
+      description: "Don't miss THRIVE ’25 at PSIT Kanpur. Access a game-changing ₹5 Lacs DST grant opportunity, secure crucial investor connections, and engage in high-impact networking through expert sessions, innovative workshops, and a premier Start-Up Expo.",
+    },
     {
       image: startupCharcha5,
       title: 'StartUp Charcha 5.0',

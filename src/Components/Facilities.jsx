@@ -31,6 +31,8 @@ import facilityTeamwork from '../assets/facilities/facility_teamwork.jpg';
 import facilityLabPc from '../assets/facilities/facility_lab_pc.jpg';
 import facilityMeeting from '../assets/facilities/facility_meeting.jpg';
 
+import gdr4 from '../assets/facilities/classroom.jpg'
+
 // Newly added real photos
 import teamworkTable from '../assets/facilities/teamworkTable.png';
 import printer3dReal from '../assets/facilities/printer3dReal.jpeg';
@@ -46,11 +48,11 @@ const facilities = [
     {
         title: "Cutting-edge Research Space",
         description: "Equipped with modern tools and technologies for advanced research and development.",
-        images: [labBenchReal, facilityLabPc, cuttingEdgeResearch, cuttingEdgeResearch2]
+        images: [facilityLabPc, cuttingEdgeResearch2]
     },
-    { title: "Group Discussion Room", description: "A collaborative space designed for team meetings and brainstorming sessions.", images: [conferenceTableWide, gdr1, gdr2] },
-    { title: "Library", description: "A vast collection of books, research papers, and digital resources for academic enrichment.", images: [library , gdr1] },
-    { title: "Conference Hall", description: "Spacious hall for seminars, guest lectures, and industry interactions.", images: [startupRoom, gdr1, gdr2] },
+    { title: "Group Discussion Room", description: "A collaborative space designed for team meetings and brainstorming sessions.", image: gdr4 },
+    { title: "Library", description: "A vast collection of books, research papers, and digital resources for academic enrichment.", image: library },
+    { title: "Conference Hall", description: "Spacious hall for seminars, guest lectures, and industry interactions.", image: startupRoom },
     {
         title: "Computer Lab",
         description: "State-of-the-art systems for programming, simulations, and research.",
