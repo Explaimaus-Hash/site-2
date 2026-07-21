@@ -6,7 +6,7 @@ import img4 from "../assets/raguraj.jpg"
 const TestimonialSection = () => {
   const testimonials = [
     {
-      name: "Dr. Pranveer Singh",
+      name: "Mr. Pranveer Singh",
       role: "Chairman",
       comment: "Welcome to PSIT, where we strive to nurture talent, inspire innovation, and empower students to achieve excellence.",
       imageSrc: `${img1}`

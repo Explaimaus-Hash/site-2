@@ -10,11 +10,11 @@ import deepak from '../../assets/team/deepak.jpeg';
 function Team() {
   const teamMembers = [
     { name: "Dr. Rajat Verma", image: rajat },
-    { name: "Nand Kishore Sharma", image: nandkishore },
-    { name: "Deepak Gupta", image: deepak },
-    { name: "Anurag Dhawan", image: anurag },
-    { name: "Sandeep Kumar Khare ", image: sandeep },
-    { name: "Vijay Kumar Yadav", image: vijay },
+    { name: "Dr. Nand Kishore Sharma", image: nandkishore },
+    { name: "Mr. Deepak Gupta", image: deepak },
+    { name: "Mr. Anurag Dhawan", image: anurag },
+    { name: "Mr. Sandeep Kumar Khare ", image: sandeep },
+    { name: "Mr. Vijay Kumar Yadav", image: vijay },
 
 
 
