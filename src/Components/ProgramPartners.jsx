@@ -77,7 +77,7 @@ const ProgramPartners = () => {
         <div className="container mx-auto px-4">
           <div className="heading mb-10">
             <h2 className="flex justify-center font-semibold text-5xl text-black pb-5">
-              Strategic Partners
+              Programs 
             </h2>
             <div className="flex justify-center">
               <div className="bg-green-500 h-[5px] w-[200px]" />

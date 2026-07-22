@@ -8,7 +8,7 @@ const Footer = () => {
     { name: "Home", path: "/" },
     { name: "About", path: "/about" },
     { name: "Our Events", path: "#our-events" },
-    { name: "Strategic Partners", path: "#strategic-partners" },
+    { name: "Strategic Partner", path: "#strategic-partners" },
   ];
 
   const handleQuickLinkClick = (e, path) => {
@@ -23,7 +23,7 @@ const Footer = () => {
 
   const socialLinks = [
     { icon: faFacebookF, url: "https://www.facebook.com/psitkanpur2004" },
-    { icon: faLinkedinIn, url: "https://www.linkedin.com/school/psitkanpur/" },
+    { icon: faLinkedinIn, url: "www.linkedin.com/company/psit-startup-incubation-foundation" },
     { icon: faXTwitter, url: "https://x.com/PSITKanpur2004" },
     { icon: faInstagram, url: "https://www.instagram.com/psitkanpur" }
   ];
