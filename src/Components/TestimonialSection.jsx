@@ -1,6 +1,6 @@
 import React from 'react';
-import img1 from "../assets/download.jpg"
-import img2 from "../assets/download (1).jpg"
+import img1 from "../assets/team/dowload_1.jpeg"
+import img2 from "../assets/team/download_2.jpeg"
 import img3 from "../assets/raghvendra_sir_cropped.jpg"
 import img4 from "../assets/raguraj.jpg"
 const TestimonialSection = () => {

@@ -8,7 +8,7 @@ const Footer = () => {
     { name: "Home", path: "/" },
     { name: "About", path: "/about" },
     { name: "Our Events", path: "#our-events" },
-    { name: "Strategic Partner", path: "#strategic-partners" },
+    { name: "Programs", path: "#strategic-partners" },
   ];
 
   const handleQuickLinkClick = (e, path) => {
@@ -121,9 +121,9 @@ const Footer = () => {
           <div className="flex flex-col md:flex-row justify-between items-center text-sm text-gray-300">
             <p>Copyright © {new Date().getFullYear()} PSIT SIF. All rights reserved.</p>
             <div className="flex space-x-4 mt-2 md:mt-0">
-              <a href="/privacy" className="hover:text-white transition-colors duration-200">Privacy Policy</a>
+              {/* <a href="/privacy" className="hover:text-white transition-colors duration-200">Privacy Policy</a>
               <span>|</span>
-              <a href="/terms" className="hover:text-white transition-colors duration-200">Terms of Service</a>
+              <a href="/terms" className="hover:text-white transition-colors duration-200">Terms of Service</a> */}
             </div>
           </div>
         </div>
