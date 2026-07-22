@@ -1,4 +1,4 @@
-import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
   Search, Filter, Globe, Users, Target, Rocket, Briefcase,
@@ -118,6 +118,11 @@ const StartupDirectoryPage = () => {
       return matchesSearch && matchesIndustry;
     });
   }, [searchTerm, selectedIndustry]);
+
+  useEffect(() => {
+    if(window !== null)
+      window.scrollTo({ top:0 })
+  }, [])
 
   return (
     <div className="min-h-screen bg-gray-50 flex flex-col">
