@@ -43,7 +43,7 @@ const facilities = [
     {
         title: "Startup Room",
         description: "A dedicated space for budding entrepreneurs to brainstorm and develop their ideas.",
-        images: [teamworkTable, facilityDesk1, facilityDesk2, startup1]
+        images: [facilityDesk1, facilityDesk2, startup1]
     },
     {
         title: "Cutting-edge Research Space",
@@ -52,7 +52,7 @@ const facilities = [
     },
     { title: "Group Discussion Room", description: "A collaborative space designed for team meetings and brainstorming sessions.", image: gdr4 },
     { title: "Library", description: "A vast collection of books, research papers, and digital resources for academic enrichment.", image: library },
-    { title: "Conference Hall", description: "Spacious hall for seminars, guest lectures, and industry interactions.", image: startupRoom },
+    { title: "Conference Hall", description: "Spacious hall for seminars, guest lectures, and industry interactions.", images: [startupRoom, teamworkTable] },
     {
         title: "Computer Lab",
         description: "State-of-the-art systems for programming, simulations, and research.",

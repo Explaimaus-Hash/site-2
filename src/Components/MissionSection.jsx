@@ -11,6 +11,7 @@ import room from "../assets/banner/room.jpeg";
 import innovationAction from "../assets/banner/innovation_action.png";
 import receptionReal from "../assets/facilities/receptionReal.png";
 import cncBig from "../assets/facilities/cnc_big.png";
+import thriveBanner from "../assets/banner/thrive_banner.jpg";
 
 const SLIDE_DURATION = 6000;
 const TRANSITION_DURATION = 0.8;
@@ -35,6 +36,11 @@ const slides = [
     image: cncBig,
     title: "Advanced Prototyping & Fabrication",
     description: "Equipped with state-of-the-art precision machinery to help innovators build market-ready hardware prototypes."
+  },
+  {
+    image: thriveBanner,
+    title: "THRIVE '25",
+    description: "A high-impact launchpad organized by PSIT Kanpur in collaboration with DST, Government of India. Bridging the gap between visionary student innovators, grant funding, and elite venture capital."
   }
 ];
 

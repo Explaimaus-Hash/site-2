@@ -47,7 +47,7 @@ const Navbar = () => {
             <div className="flex items-center space-x-4 md:space-x-8">
               <img src={img6} alt="PSIT SIF" className="h-14 md:h-20 lg:h-24 w-auto object-contain" />
               <div className="h-12 w-px bg-slate-200 hidden md:block" />
-              <img src={img7} alt="DST" className="h-14 md:h-16 lg:h-14 w-auto object-contain" />
+              <img src={img7} alt="DST" className="h-14 md:h-20 lg:h-24 w-auto object-contain" />
             </div>
 
             {/* Central Title */}
@@ -69,7 +69,7 @@ const Navbar = () => {
             <div className="flex items-center space-x-4 md:space-x-8">
               <img src={img8} alt="PSIT Kanpur" className="h-14 md:h-16 lg:h-20 w-auto object-contain" />
               <div className="h-12 w-px bg-slate-200 hidden md:block" />
-              <img src={img} alt="DST NIDHI" className="h-12 md:h-16 lg:h-14 w-auto object-contain" />
+              <img src={img} alt="DST NIDHI" className="h-12 md:h-16 lg:h-16 w-auto object-contain" />
             </div>
           </div>
         </div>
