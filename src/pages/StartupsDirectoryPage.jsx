@@ -120,8 +120,8 @@ const StartupDirectoryPage = () => {
   }, [searchTerm, selectedIndustry]);
 
   useEffect(() => {
-    if(window !== null)
-      window.scrollTo({ top:0 })
+    if (window !== null)
+      window.scrollTo({ top: 0 })
   }, [])
 
   return (
@@ -211,9 +211,7 @@ const StartupDirectoryPage = () => {
           </div>
 
           {/* Startups Grid/List */}
-          <AnimatePresence mode="popLayout">
-            <motion.div
-              layout
+          <div
               className={viewMode === 'grid'
                 ? "grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6"
                 : "flex flex-col gap-4"
@@ -232,8 +230,7 @@ const StartupDirectoryPage = () => {
                   <p className="text-gray-500">Try adjusting your search or filters to find what you're looking for.</p>
                 </div>
               )}
-            </motion.div>
-          </AnimatePresence>
+            </div>
         </div>
       </main>
 
@@ -245,23 +242,84 @@ const StartupDirectoryPage = () => {
 const StartupCard = ({ startup, viewMode }) => {
   const isGrid = viewMode === 'grid';
 
+  // ─── List View: logo full-height left strip, text right ───
+  if (!isGrid) {
+    return (
+      <div
+        className="bg-white rounded-2xl shadow-sm border border-gray-100 transition-all duration-300 hover:shadow-xl hover:border-green-100 hover:-translate-y-1 group flex flex-row overflow-hidden relative"
+      >
+        {/* Logo — full left side, top to bottom */}
+        <div className="w-28 min-h-full flex-shrink-0 bg-gray-50 border-r border-gray-100 flex items-center justify-center group-hover:bg-white transition-colors duration-300">
+          {startup.logo ? (
+            <img
+              src={startup.logo}
+              alt={startup.name}
+              className="w-full h-full object-contain p-3 transition-transform duration-500 group-hover:scale-110"
+            />
+          ) : (
+            <div className="flex flex-col items-center justify-center text-gray-300">
+              <Rocket className="w-9 h-9 mb-1 group-hover:text-green-500 transition-colors" />
+              <span className="text-[8px] font-bold uppercase tracking-widest group-hover:text-green-600">Growth</span>
+            </div>
+          )}
+        </div>
+
+        {/* Text content — right side */}
+        <div className="flex-grow p-5 flex flex-col justify-center min-w-0">
+          <h3 className="text-lg font-bold text-gray-900 group-hover:text-green-700 transition-colors mb-1 line-clamp-1">
+            {startup.name}
+          </h3>
+          <div className="flex items-center text-gray-500 text-sm mb-2">
+            <Briefcase className="w-3.5 h-3.5 mr-1.5 flex-shrink-0" />
+            <span className="line-clamp-1">{startup.industry}</span>
+          </div>
+
+          <div className="flex items-start text-sm mb-2">
+            <Users className="w-4 h-4 mr-1.5 text-gray-400 mt-0.5 flex-shrink-0" />
+            <span className="text-gray-600 font-medium line-clamp-1">{startup.founders}</span>
+          </div>
+
+          <div className="flex items-center text-xs">
+            <span className={`px-2 py-1 rounded-full font-bold uppercase tracking-wider ${startup.stage === 'Early Revenue' || startup.stage === 'Scaling' || startup.stage === 'Growth/Scale'
+              ? 'bg-blue-50 text-blue-600'
+              : startup.stage === 'Pre-seed' || startup.stage === 'Pre-Seed'
+                ? 'bg-amber-50 text-amber-600'
+                : 'bg-gray-100 text-gray-600'
+              }`}>
+              {startup.stage === '—' ? 'Undisclosed' : startup.stage}
+            </span>
+          </div>
+        </div>
+
+        {/* Website link — top right corner */}
+        {startup.website && (
+          <a
+            href={`https://${startup.website}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="absolute top-3 right-3 p-2 rounded-lg bg-white/80 backdrop-blur-sm text-gray-400 hover:bg-green-50 hover:text-green-600 transition-all shadow-sm opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0"
+            title="Visit Website"
+          >
+            <ExternalLink className="w-4 h-4" />
+          </a>
+        )}
+      </div>
+    );
+  }
+
+  // ─── Grid View: original vertical card (unchanged) ───
   return (
-    <motion.div
-      layout
-      initial={{ opacity: 0, scale: 0.95 }}
-      animate={{ opacity: 1, scale: 1 }}
-      exit={{ opacity: 0, scale: 0.95 }}
-      whileHover={{ y: -4 }}
-      className={`bg-white rounded-2xl shadow-sm border border-gray-100 transition-all duration-300 hover:shadow-xl hover:border-green-100 group flex ${isGrid ? 'flex-col' : 'flex-row items-center p-4'}`}
+    <div
+      className="bg-white rounded-2xl shadow-sm border border-gray-100 transition-all duration-300 hover:shadow-xl hover:border-green-100 hover:-translate-y-1 group flex flex-col"
     >
-      <div className={`${isGrid ? 'p-6 flex-grow' : 'flex-grow px-4'}`}>
-        <div className={`flex justify-between items-start ${isGrid ? 'mb-6' : 'mr-6 flex-shrink-0'}`}>
-          <div className={`${isGrid ? 'w-full h-32' : 'w-24 h-24'} bg-gray-50 rounded-xl overflow-hidden flex items-center justify-center group-hover:bg-white transition-colors duration-300 border border-gray-100 relative`}>
+      <div className="p-6 flex-grow">
+        <div className="flex justify-between items-start mb-6">
+          <div className="w-full h-32 bg-gray-50 rounded-xl overflow-hidden flex items-center justify-center group-hover:bg-white transition-colors duration-300 border border-gray-100 relative">
             {startup.logo ? (
               <img src={startup.logo} alt={startup.name} className="w-full h-full object-contain p-2 transition-transform duration-500 group-hover:scale-110" />
             ) : (
               <div className="flex flex-col items-center justify-center text-gray-300">
-                <Rocket className={`${isGrid ? 'w-10 h-10' : 'w-8 h-8'} mb-1 group-hover:text-green-500 transition-colors`} />
+                <Rocket className="w-10 h-10 mb-1 group-hover:text-green-500 transition-colors" />
                 <span className="text-[8px] font-bold uppercase tracking-widest group-hover:text-green-600">Growth</span>
               </div>
             )}
@@ -271,7 +329,7 @@ const StartupCard = ({ startup, viewMode }) => {
               href={`https://${startup.website}`}
               target="_blank"
               rel="noopener noreferrer"
-              className={`absolute p-2 rounded-lg bg-white/80 backdrop-blur-sm text-gray-400 hover:bg-green-50 hover:text-green-600 transition-all shadow-sm ${isGrid ? 'top-4 right-4' : 'top-2 right-2'} opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0`}
+              className="absolute p-2 rounded-lg bg-white/80 backdrop-blur-sm text-gray-400 hover:bg-green-50 hover:text-green-600 transition-all shadow-sm top-4 right-4 opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0"
               title="Visit Website"
             >
               <ExternalLink className="w-4 h-4" />
@@ -305,17 +363,13 @@ const StartupCard = ({ startup, viewMode }) => {
               </span>
             </div>
 
-            {isGrid && (
-              <p className="text-gray-500 text-sm leading-relaxed line-clamp-2 pt-2 border-t border-gray-50 mt-2">
-                {startup.about}
-              </p>
-            )}
+            <p className="text-gray-500 text-sm leading-relaxed line-clamp-2 pt-2 border-t border-gray-50 mt-2">
+              {startup.about}
+            </p>
           </div>
         </div>
       </div>
-
-
-    </motion.div>
+    </div>
   );
 };
 
