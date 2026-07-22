@@ -13,10 +13,10 @@ function Team() {
     { name: "Nand Kishore Sharma", position: "Head of Department", image: nandkishore },
     { name: "Rajat Verma", position: "Additional Head of Department", image: rajat },
     { name: "Deepak Gupta", position: "Additional Head of Department", image: deepak },
-    { name: "Anurag Dhawan", position: "CEO of E-Cell", image: anurag },
+    { name: "Anurag Dhawan", position: "CEO of SIF", image: anurag },
     { name: "Sandeep Kumar Khare", position: "Technical Incubation Associate", image: sandeep },
     { name: "Vijay Kumar Yadav", position: "Incubation Associate", image: vijay },
-    { name: "Lavit Sahu", position: "Incubation Associate", image: lavit },
+    { name: "Lavitra Sahu", position: "Incubation Associate", image: lavit },
   ];
 
   /*  // State to manage the current carousel index

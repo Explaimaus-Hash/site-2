@@ -24,7 +24,7 @@ const Footer = () => {
   const socialLinks = [
     { icon: faFacebookF, url: "https://www.facebook.com/psitkanpur2004" },
     { icon: faLinkedinIn, url: "https://www.linkedin.com/company/psit-startup-incubation-foundation" },
-    { icon: faXTwitter, url: "https://x.com/PSITKanpur2004" },
+    { icon: faXTwitter, url: "https://x.com/psitsif" },
     { icon: faInstagram, url: "https://www.instagram.com/psitkanpur" }
   ];
 
