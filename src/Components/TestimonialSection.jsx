@@ -37,7 +37,7 @@ const TestimonialSection = () => {
         <h1 className="section-title">Our <span className="text-green-600">Dignitaries</span></h1>
         <div className="section-title-bar" />
         <p className="section-subtitle">
-          Guided by the vision and leadership of our esteemed mentors who pave the way for academic and entrepreneurial excellence.
+          Guided by the vision and leadership of our esteemed mentors, who pave the way for academic and entrepreneurial excellence.
         </p>
       </div>
 

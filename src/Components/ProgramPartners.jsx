@@ -45,7 +45,7 @@ const ProgramPartners = () => {
   const ecosystemCards = [
     {
       src: img1,
-      title: "NIDHI-DST ITBI",
+      title: "NIDHI-DST iTBI",
       description: "The National Initiative for Developing and Harnessing Innovations (NIDHI) is a flagship program under the Department of Science and Technology (DST), Government of India. It supports innovations addressing societal challenges and fostering entrepreneurship.",
       number: "01"
     },

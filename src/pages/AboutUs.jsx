@@ -53,7 +53,7 @@ const SuccessStoriesSlider = () => {
           </div>
 
           <div className="w-full md:w-2/3 relative">
-            <Quote className="absolute -top-6 -left-6 w-12 h-12 text-green-100 -z-10" />
+            {/* <Quote className="absolute -top-6 -left-6 w-12 h-12 text-green-100 -z-10" /> */}
             <h3 className="text-3xl font-bold text-gray-900 mb-4">{stories[currentIndex].company}</h3>
             <p className="text-xl text-gray-600 leading-relaxed mb-6 italic">
               "{stories[currentIndex].description}"
@@ -227,7 +227,7 @@ export default function AboutUs() {
                 <div className="section-title-bar !mx-0" />
               </div>
               <p className="text-lg md:text-xl lg:text-2xl text-gray-600 text-justify">
-                Our primary focus spans Artificial Intelligence (AI), Machine Learning (ML),
+                Our primary focus spans Artificial Intelligence (AI) and Machine Learning (ML),
                 and wearable devices — three domains reshaping how industries operate.
                 From AI-driven analytics and intelligent healthcare wearables to smart
                 consumer devices and next-generation automation, we provide the mentorship,

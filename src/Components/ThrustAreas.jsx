@@ -6,7 +6,7 @@ import wear from '../assets/wear.jpg';
 const ThrustAreas = () => {
     const thrustAreas = [
         { title: "CS & Software Engineering", description: "Exploring modern software development, system architecture, and best practices.", image: cse },
-        { title: "AI/ML", description: "Advancing artificial intelligence and machine learning research.", image: aiml },
+        { title: "Artificial Intelligence and Machine Learning", description: "Advancing artificial intelligence and machine learning research.", image: aiml },
         { title: "Wearable Devices", description: "Innovating in the field of smart wearables and health monitoring technologies.", image: wear }
     ];
 
@@ -23,7 +23,7 @@ const ThrustAreas = () => {
             </div>
             <div className="flex flex-col md:flex-row justify-center items-center overflow-x-auto md:overflow-visible gap-6 py-4 px-2">
             {thrustAreas.map((area, index) => (
-                <div key={index} className="flex-shrink-0 w-80 bg-white rounded-lg shadow-md overflow-hidden">
+                <div key={index} className="flex-shrink-0 w-96 bg-white rounded-lg shadow-md overflow-hidden">
                 <img src={area.image} alt={area.title} className="w-full h-48 object-cover" />
                 <div className="p-4 text-center">
                     <h3 className="text-lg font-semibold text-gray-900">{area.title}</h3>

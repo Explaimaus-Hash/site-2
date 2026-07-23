@@ -1,4 +1,4 @@
-import img6 from "../assets/img6.png";
+import img6 from "../assets/psif_logo_2.png";
 import img7 from "../assets/img7.png";
 import img8 from "../assets/img8.png";
 import img from "../assets/th.png";
@@ -43,7 +43,7 @@ const Navbar = () => {
     <div className="relative w-full">
       {/* 2. Main Institutional Header */}
       <div className="bg-white dark:bg-[#1a1a1a] border-b border-slate-100 dark:border-transparent py-4 md:py-6 transition-colors duration-300">
-        <div className="max-w-7xl mx-auto px-4">
+        <div className="max-w-8xl mx-auto px-4">
           <div className="flex flex-col md:flex-row items-center justify-between gap-6">
             {/* Left Partners — 3 logos */}
             <div className="flex items-center space-x-4 md:space-x-8">
@@ -57,7 +57,7 @@ const Navbar = () => {
             {/* Central Title */}
             <div className="flex flex-col items-center text-center">
               <h1 className="text-xl md:text-2xl lg:text-3xl font-extrabold text-slate-900 dark:text-[#e6edf3] tracking-tight leading-tight transition-colors duration-300">
-                PSIT STARTUP AND INCUBATION FOUNDATION
+                PSIT STARTUP & INCUBATION FOUNDATION
               </h1>
               <div className="mt-1 flex flex-col items-center">
                 <span className="text-lg md:text-xl lg:text-2xl font-bold text-green-600 tracking-tighter">

@@ -112,7 +112,7 @@ const Footer = () => {
               <p className="text-gray-300">
                 <span className="font-medium">Address:</span>
                 <span className="ml-2">
-                  Pranveer Singh Institute of Technology NH 19, Bhauti - Kanpur - 209305 Uttar Pradesh, India
+                  Pranveer Singh Institute of Technology NH 19, Bhauti, Kanpur - 209305, Uttar Pradesh, India
                 </span>
               </p>
             </div>

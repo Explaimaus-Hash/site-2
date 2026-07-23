@@ -70,7 +70,7 @@ const GridEventCard = ({ event, index }) => {
       transition={{ duration: 0.5, delay: index * 0.1, ease: "easeOut" }}
       className="group standard-card"
     >
-      <div className="relative h-56 w-full image-container rounded-t-3xl rounded-b-none overflow-hidden bg-[#f5f5f5] dark:bg-[#21262d] p-1">
+      <div className="relative h-52 w-full image-container rounded-t-3xl rounded-b-none overflow-hidden bg-[#f5f5f5] dark:bg-[#21262d] p-1">
         <img
           src={event.image}
           alt={event.title}
@@ -107,7 +107,7 @@ const Event = () => {
   const events = [
     {
       image: thrive25,
-      title: 'Thrive 25',
+      title: "Thrive '25",
       description: "Don't miss THRIVE ’25 at PSIT Kanpur. Access a game-changing ₹5 Lacs DST grant opportunity, secure crucial investor connections, and engage in high-impact networking through expert sessions, innovative workshops, and a premier Start-Up Expo.",
     },
     {
@@ -118,12 +118,12 @@ const Event = () => {
     {
       image: startupCharcha4,
       title: 'StartUp Charcha 4.0',
-      description: 'An interactive session focusing on tech-driven startups, featuring industry leaders sharing their journey from ideation to successful market deployment.',
+      description: 'An interactive session focusing on tech-driven startups, featuring industry leaders sharing their journey from ideation to successful market.',
     },
     {
       image: startupCharcha3,
       title: 'StartUp Charcha 3.0',
-      description: 'STARTUP CHARCHA 3.0, an exclusive talk show with Mr. Nitin Sharma, Founder of ROAD PILOT, as our esteemed chief guest.',
+      description: 'StartUp Charcha 3.0, an exclusive talk show with Mr. Nitin Sharma, Founder of ROAD PILOT, as our esteemed chief guest.',
     },
     {
       image: img3,
@@ -133,7 +133,7 @@ const Event = () => {
     {
       image: img4,
       title: 'Demo Day',
-      description: 'Organized under the NIDHI ITBI initiative, showcasing innovative prototypes and breakthrough ideas.',
+      description: 'Organized under the NIDHI iTBI initiative, showcasing innovative prototypes and breakthrough ideas.',
     },
     {
       image: hustlersNew,
