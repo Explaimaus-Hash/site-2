@@ -2,7 +2,8 @@ import img6 from "../assets/img6.png";
 import img7 from "../assets/img7.png";
 import img8 from "../assets/img8.png";
 import img from "../assets/th.png";
-import naacImg from "../assets/naac.jpg";
+import naacImg from "../assets/naac.png";
+import ideaLabLogo from "../assets/logos/idea-lab-logo.png"
 
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
@@ -70,6 +71,8 @@ const Navbar = () => {
 
             {/* Right Partners — 2 logos */}
             <div className="flex items-center space-x-4 md:space-x-8">
+              <img src={ideaLabLogo} alt="Idea Lab" className="h-12 md:h-16 lg:h-16 w-auto object-contain" />
+              <div className="h-12 w-px bg-slate-200 hidden md:block" />
               <img src={img} alt="DST NIDHI" className="h-12 md:h-16 lg:h-16 w-auto object-contain" />
               <div className="h-12 w-px bg-slate-200 hidden md:block" />
               <img src={naacImg} alt="NAAC A+ Accredited" className="h-14 md:h-16 lg:h-20 w-auto object-contain" />

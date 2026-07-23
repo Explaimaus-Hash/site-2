@@ -2,21 +2,21 @@ import React, { useState } from "react";
 import img from "../../assets/laww.jpg";
 import sandeep from "../../assets/team/sandeep.jpeg";
 import anurag from "../../assets/team/anurag.jpeg";
-import vijay from "../../assets/team/vijay.jpeg";
+import vijay from "../../assets/team/vijay_scaled.jpg";
 import rajat from '../../assets/team/rajat sir.jpg';
 import nandkishore from '../../assets/team/nandkishore.jpg';
 import deepak from '../../assets/team/deepak.jpeg';
-import lavit from '../../assets/team/lavit.jpg'
+import lavit from '../../assets/team/lavit_scaled.jpg'
 
 function Team() {
   const teamMembers = [
-    { name: "Nand Kishore Sharma", position: "Head of Department", image: nandkishore },
-    { name: "Rajat Verma", position: "Additional Head of Department", image: rajat },
-    { name: "Deepak Gupta", position: "Additional Head of Department", image: deepak },
-    { name: "Anurag Dhawan", position: "CEO of SIF", image: anurag },
-    { name: "Sandeep Kumar Khare", position: "Technical Incubation Associate", image: sandeep },
-    { name: "Vijay Kumar Yadav", position: "Incubation Associate", image: vijay },
-    { name: "Lavitra Sahu", position: "Incubation Associate", image: lavit },
+    { name: "Dr. Nand Kishore Sharma", position: "Head of Department - CSE", image: nandkishore },
+    { name: "Dr. Rajat Verma", position: "Additional Head of Department - CSE", image: rajat },
+    { name: "Mr. Deepak Gupta", position: "Additional Head of Department - CSE", image: deepak },
+    { name: "Mr. Anurag Dhawan", position: "CEO - PSIT SIF", image: anurag },
+    { name: "Mr. Sandeep Kumar Khare", position: "Technical Incubation Associate", image: sandeep },
+    { name: "Mr. Vijay Kumar Yadav", position: "Incubation Associate", image: vijay },
+    { name: "Mr. Lavitra Sahu", position: "Incubation Associate", image: lavit },
   ];
 
   /*  // State to manage the current carousel index
@@ -52,7 +52,7 @@ function Team() {
       </div>
 
       {/* Team Grid */}
-      <div className="max-w-5xl mx-auto px-4">
+      <div className="max-w-6xl mx-auto px-4">
         <div className="flex flex-col sm:flex-row flex-wrap justify-center items-center gap-10 sm:gap-14">
           {teamMembers.map((member, index) => (
             <div
@@ -62,14 +62,14 @@ function Team() {
             >
               {/* Photo with gradient ring */}
               <div
-                className="relative p-[3px] rounded-full transition-all duration-500 ease-out group-hover:scale-105 group-hover:shadow-xl group-hover:shadow-green-500/15"
+                className="relative p-[3px] rounded-full transition-all duration-500 ease-out"
                 style={{
                   background: 'linear-gradient(135deg, #10b981 0%, #059669 40%, #0d9488 70%, #14b8a6 100%)',
                 }}
               >
                 <div className="rounded-full p-[3px] bg-white">
                   <img
-                    className="w-44 h-44 sm:w-48 sm:h-48 rounded-full object-cover object-top transition-all duration-500 group-hover:brightness-105 group-hover:contrast-105"
+                    className="w-44 h-44 sm:w-48 sm:h-48 rounded-full object-cover object-top transition-all duration-500 z-50 relative"
                     src={member.image}
                     alt={member.name}
                   />
