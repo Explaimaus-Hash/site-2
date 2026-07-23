@@ -2,6 +2,7 @@ import img6 from "../assets/img6.png";
 import img7 from "../assets/img7.png";
 import img8 from "../assets/img8.png";
 import img from "../assets/th.png";
+import naacImg from "../assets/naac.jpg";
 
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
@@ -14,10 +15,10 @@ const Navbar = () => {
   const [isDarkMode, setIsDarkMode] = useState(false);
 
   useEffect(() => {
-    
-      setIsDarkMode(false);
-      document.documentElement.classList.remove('dark');
-    
+
+    setIsDarkMode(false);
+    document.documentElement.classList.remove('dark');
+
   }, []);
 
 
@@ -43,8 +44,10 @@ const Navbar = () => {
       <div className="bg-white dark:bg-[#1a1a1a] border-b border-slate-100 dark:border-transparent py-4 md:py-6 transition-colors duration-300">
         <div className="max-w-7xl mx-auto px-4">
           <div className="flex flex-col md:flex-row items-center justify-between gap-6">
-            {/* Left Partners */}
+            {/* Left Partners — 3 logos */}
             <div className="flex items-center space-x-4 md:space-x-8">
+              <img src={img8} alt="PSIT Kanpur" className="h-14 md:h-20 lg:h-24 w-auto object-contain" />
+              <div className="h-12 w-px bg-slate-200 hidden md:block" />
               <img src={img6} alt="PSIT SIF" className="h-14 md:h-20 lg:h-24 w-auto object-contain" />
               <div className="h-12 w-px bg-slate-200 hidden md:block" />
               <img src={img7} alt="DST" className="h-14 md:h-20 lg:h-24 w-auto object-contain" />
@@ -65,11 +68,11 @@ const Navbar = () => {
               </div>
             </div>
 
-            {/* Right Partners */}
+            {/* Right Partners — 2 logos */}
             <div className="flex items-center space-x-4 md:space-x-8">
-              <img src={img8} alt="PSIT Kanpur" className="h-14 md:h-16 lg:h-20 w-auto object-contain" />
-              <div className="h-12 w-px bg-slate-200 hidden md:block" />
               <img src={img} alt="DST NIDHI" className="h-12 md:h-16 lg:h-16 w-auto object-contain" />
+              <div className="h-12 w-px bg-slate-200 hidden md:block" />
+              <img src={naacImg} alt="NAAC A+ Accredited" className="h-14 md:h-16 lg:h-20 w-auto object-contain" />
             </div>
           </div>
         </div>
@@ -77,11 +80,10 @@ const Navbar = () => {
 
       {/* 3. Sticky Navigation */}
       <nav
-        className={`sticky top-0 w-full z-50 transition-all duration-500 ${
-          isScrolled
-            ? "glass-card py-3 translate-y-0"
-            : "bg-white dark:bg-[#111111] py-4 border-b border-slate-50 dark:border-[#2d2d2d]"
-        }`}
+        className={`sticky top-0 w-full z-50 transition-all duration-500 ${isScrolled
+          ? "glass-card py-3 translate-y-0"
+          : "bg-white dark:bg-[#111111] py-4 border-b border-slate-50 dark:border-[#2d2d2d]"
+          }`}
       >
         <div className="max-w-7xl mx-auto px-4">
           <div className="flex justify-between items-center h-10">
@@ -100,7 +102,7 @@ const Navbar = () => {
 
             {/* CTA Button & Theme Toggle */}
             <div className="hidden md:flex items-center gap-4">
-            
+
               <a
                 href="https://docs.google.com/forms/d/e/1FAIpQLSdC7JnM4DRB5AhCctMmgUiCG73-uiDLR8NxbIky6UUOUCC8mA/viewform"
                 target="_blank"
@@ -119,7 +121,7 @@ const Navbar = () => {
                 <span className="text-sm font-bold text-slate-900 dark:text-[#e6edf3] uppercase">Menu</span>
               </div>
               <div className="flex items-center gap-2">
-                
+
                 <button
                   onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
                   className="p-2 transition-colors hover:bg-slate-100 dark:hover:bg-[#21262d] rounded-xl"

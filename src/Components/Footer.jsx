@@ -1,9 +1,13 @@
 import React from "react";
+import { useNavigate, useLocation } from "react-router-dom";
 import img from "../assets/img8.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faXTwitter, faInstagram, faFacebookF, faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
 
 const Footer = () => {
+  const navigate = useNavigate();
+  const location = useLocation();
+
   const quickLinks = [
     { name: "Home", path: "/" },
     { name: "About", path: "/about" },
@@ -14,9 +18,23 @@ const Footer = () => {
   const handleQuickLinkClick = (e, path) => {
     if (path.startsWith("#")) {
       e.preventDefault();
-      const el = document.getElementById(path.substring(1));
-      if (el) {
-        el.scrollIntoView({ behavior: "smooth" });
+      const sectionId = path.substring(1);
+
+      if (location.pathname === "/" || location.pathname === "/home") {
+        // Already on home page — just scroll to the section
+        const el = document.getElementById(sectionId);
+        if (el) {
+          el.scrollIntoView({ behavior: "smooth" });
+        }
+      } else {
+        // Navigate to home page with the hash, then scroll after render
+        navigate("/" + path);
+        setTimeout(() => {
+          const el = document.getElementById(sectionId);
+          if (el) {
+            el.scrollIntoView({ behavior: "smooth" });
+          }
+        }, 300);
       }
     }
   };

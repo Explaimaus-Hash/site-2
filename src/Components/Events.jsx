@@ -12,7 +12,6 @@ import img7 from "../assets/events/IPR2.jpeg"
 import elevate26 from "../assets/banner/audi.jpg"
 import drone from "../assets/events/dron_high_res.jpg"
 import presentation from "../assets/events/presentation_high_res.jpg"
-import gokart from "../assets/banner/gokart.jpg"
 
 // Official Event Posters
 import startupCharcha5 from "../assets/events/startup_charcha_5.jpg"
@@ -27,7 +26,6 @@ const showcaseImages = [
   { url: img7, title: "Intellectual Property Rights Workshop", description: "Empowering innovators with knowledge of legal protections and patent filing." },
   { url: drone, title: "Drone Technology Workshop", description: "Hands-on experience in assembling and programming advanced UAV systems." },
   { url: presentation, title: "Innovation Showcase", description: "Startups presenting ground-breaking solutions to industry experts." },
-  { url: gokart, title: "Go-Kart Prototype Showcase", description: "Students demonstrating their custom-built Go-Kart prototype to industry mentors and faculty." }
 ];
 
 const FeaturedEventCard = ({ event, index }) => {

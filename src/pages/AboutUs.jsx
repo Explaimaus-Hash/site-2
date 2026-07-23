@@ -12,15 +12,15 @@ const SuccessStoriesSlider = () => {
       company: "Dualite",
       logo: dualiteLogo,
       achievement: "Secured funding from 100X.VC",
-      description: "Dualite successfully transitioned from an early-stage prototype to a venture-backed startup, securing substantial funding from the prestigious 100X.VC. Their journey showcases the power of technical precision and market-ready innovation nurtured within the PSIT-SIF ecosystem.",
-      impact: "Revolutionizing how developers and designers collaborate through seamless design-to-code automation."
+      description: "Dualite transitioned from an early-stage prototype to a venture-backed startup, securing substantial funding from 100X.VC. Their journey demonstrates how technical precision and market-ready innovation, nurtured within our ecosystem, can attract serious investor confidence.",
+      impact: "Transforming developer-designer collaboration through seamless design-to-code automation."
     },
     {
       company: "Senseoriginal Technologies",
       logo: senseLogo,
       achievement: "Early Revenue Growth & Market Traction",
-      description: "Senseoriginal has demonstrated exceptional growth by achieving early revenue milestones in the competitive IoT and Deeptech landscape. Their focus on reducing counterfeiting through advanced technology has positioned them as a rising leader in brand protection.",
-      impact: "Leading the charge in deep-tech innovation by providing cutting-edge security solutions for global brands."
+      description: "Senseoriginal achieved early revenue milestones in the IoT and deep-tech landscape, demonstrating exceptional growth. Their commitment to combating counterfeiting through advanced technology has positioned them as an emerging leader in brand protection.",
+      impact: "Pioneering deep-tech security solutions that protect global brands from counterfeiting."
     }
   ];
 
@@ -69,13 +69,13 @@ const SuccessStoriesSlider = () => {
       </AnimatePresence>
 
       <div className="flex justify-center gap-4 mt-8">
-        <button 
+        <button
           onClick={() => setCurrentIndex((prev) => (prev - 1 + stories.length) % stories.length)}
           className="p-3 rounded-full bg-white shadow-md border border-gray-100 text-gray-400 hover:text-green-600 hover:border-green-200 transition-all"
         >
           <ChevronLeft className="w-6 h-6" />
         </button>
-        <button 
+        <button
           onClick={() => setCurrentIndex((prev) => (prev + 1) % stories.length)}
           className="p-3 rounded-full bg-white shadow-md border border-gray-100 text-gray-400 hover:text-green-600 hover:border-green-200 transition-all"
         >
@@ -85,7 +85,7 @@ const SuccessStoriesSlider = () => {
 
       <div className="flex justify-center gap-2 mt-4">
         {stories.map((_, idx) => (
-          <div 
+          <div
             key={idx}
             className={`h-1.5 rounded-full transition-all duration-300 ${idx === currentIndex ? 'w-8 bg-green-500' : 'w-2 bg-gray-200'}`}
           />
@@ -108,21 +108,22 @@ export default function AboutUs() {
         </div>
 
         {/* Introduction Text */}
-        <div className="mt-8 text-lg md:text-xl lg:text-2xl text-neutral-600 space-y-8 max-w-4xl mx-auto text-center">
+        <div className="mt-8 text-lg md:text-xl lg:text-2xl text-neutral-600 space-y-8 max-w-4xl mx-auto text-justify">
           <p>
-            PSIT Startup and Incubation Foundation (PSIT-SIF) is a dedicated initiative
+            PSIT Startup and Incubation Foundation (PSIT-SIF) is an initiative dedicated to
             fostering innovation and entrepreneurship at Pranveer Singh Institute of
-            Technology (PSIT), Kanpur. Inspired by the innovative spirit of IIT Kanpur,
-            PSIT-SIF aims to build a robust startup ecosystem by providing aspiring
-            entrepreneurs with the necessary resources, mentorship, and support to
-            transform their ideas into successful ventures.
+            Technology (PSIT), Kanpur. Drawing inspiration from IIT Kanpur's pioneering
+            ecosystem, we strive to build a thriving startup environment by equipping
+            entrepreneurs with targeted mentorship, hands-on resources, and the strategic
+            support needed to turn bold ideas into viable ventures.
           </p>
 
           <p>
-            Our Startup Incubation Centre stands at the forefront of India's innovation ecosystem,
-            empowering students, transforming industries, and fueling economic growth. We offer a
-            comprehensive support system that includes expert mentorship, access to state-of-the-art
-            facilities, networking opportunities, and financial support to help startups thrive.
+            Our Incubation Centre operates at the heart of India's innovation landscape,
+            empowering students, transforming industries, and fueling economic growth. We deliver
+            an integrated support system comprising expert mentorship, modern research-grade
+            facilities, strategic networking, and financial backing — all designed to help
+            startups scale with confidence.
           </p>
         </div>
 
@@ -138,32 +139,32 @@ export default function AboutUs() {
               {
                 title: "Seed Funding",
                 image: "/fet1.png",
-                description: "Access to financial assistance to kick-start your venture. Helping startups prepare for fundraising and investor pitches."
+                description: "Early-stage financial assistance helps founders launch their ventures and prepare confidently for fundraising and investor engagements."
               },
               {
                 title: "Mentorship",
                 image: "/fet2.png",
-                description: "Guidance from industry experts to navigate challenges and seize opportunities."
+                description: "Dedicated industry mentors guide founders through challenges and help them identify high-impact growth opportunities."
               },
               {
                 title: "Infrastructure",
                 image: "/fet3.png",
-                description: "State-of-the-art facilities and workspaces to foster innovation."
+                description: "Modern laboratories, prototyping stations, and co-working spaces provide the infrastructure to innovate and iterate rapidly."
               },
               {
                 title: "Networking",
                 image: "/fet4.png",
-                description: "Connect with investors, industry leaders, and fellow entrepreneurs."
+                description: "Curated introductions to investors, industry leaders, and peer founders open doors to partnerships, funding, and market access."
               },
               {
                 title: "Training & Workshops",
                 image: "/fet5.png",
-                description: "Enhance skills and knowledge through specialized training sessions."
+                description: "Targeted workshops and hands-on training sessions sharpen technical skills, business acumen, and market readiness."
               },
               {
                 title: "Community and Collaboration",
                 image: "/fet6.png",
-                description: "Creating a collaborative environment where startups can interact and learn from each other."
+                description: "A vibrant peer community enables startups to exchange insights, share resources, and accelerate collective learning."
               }
             ].map((feature, index) => (
               <div key={index} className="card flex flex-col bg-white shadow-md border border-slate-200 rounded-lg">
@@ -191,15 +192,13 @@ export default function AboutUs() {
                 <h2 className="section-title !text-left">Fueling Innovation at PSIT-SIF</h2>
                 <div className="section-title-bar !mx-0" />
               </div>
-              <p className="text-lg md:text-xl lg:text-2xl text-gray-600 text-center">
-                At PSIT-SIF, we believe in the power of innovation to drive meaningful
-                change and create a lasting impact on society. Our incubation programs
-                are carefully designed to equip the next generation of entrepreneurs
-                with the essential tools, mentorship, and resources needed to transform
-                their ideas into successful ventures. Through a dynamic ecosystem of
-                expert guidance, networking opportunities, and financial support, we
-                empower aspiring innovators to navigate challenges, refine their business
-                models, and bring groundbreaking solutions to life.
+              <p className="text-lg md:text-xl lg:text-2xl text-gray-600 text-justify">
+                Innovation drives lasting change, and our incubation programs exist to
+                make that change possible. We equip emerging entrepreneurs with practical
+                tools, expert mentorship, and strategic resources — everything required
+                to move from concept to market. Through a robust ecosystem of guidance,
+                networking, and funding, we help founders navigate obstacles, sharpen
+                their business models, and deliver solutions that matter.
               </p>
             </div>
             <div className="lg:w-1/3">
@@ -227,13 +226,13 @@ export default function AboutUs() {
                 <h2 className="section-title !text-left">Focus Area: Emerging Technologies</h2>
                 <div className="section-title-bar !mx-0" />
               </div>
-              <p className="text-lg md:text-xl lg:text-2xl text-gray-600 text-center">
-                PSIT-SIF is actively supporting startups in cutting-edge fields like Artificial Intelligence (AI),
-                Machine Learning (ML), and Wearable Devices. Whether it's developing AI-powered solutions,
-                revolutionizing healthcare with innovative wearable technology, enhancing user experiences
-                with smart gadgets, or creating intelligent devices for the future, PSIT-SIF provides a
-                launchpad with mentorship, resources, and networking opportunities to turn groundbreaking
-                ideas into reality.
+              <p className="text-lg md:text-xl lg:text-2xl text-gray-600 text-justify">
+                Our primary focus spans Artificial Intelligence (AI), Machine Learning (ML),
+                and wearable devices — three domains reshaping how industries operate.
+                From AI-driven analytics and intelligent healthcare wearables to smart
+                consumer devices and next-generation automation, we provide the mentorship,
+                funding, and network access that founders need to move from prototype
+                to market-ready product.
               </p>
             </div>
           </div>

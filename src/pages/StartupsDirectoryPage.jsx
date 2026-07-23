@@ -363,7 +363,7 @@ const StartupCard = ({ startup, viewMode }) => {
               </span>
             </div>
 
-            <p className="text-gray-500 text-sm leading-relaxed line-clamp-2 pt-2 border-t border-gray-50 mt-2">
+            <p className="text-gray-500 text-sm leading-relaxed pt-2 border-t border-gray-50 mt-2">
               {startup.about}
             </p>
           </div>

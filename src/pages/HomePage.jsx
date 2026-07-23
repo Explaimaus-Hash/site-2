@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import MiddleSection from "../Components/MiddleSection";
 import ProgramPartners from "../Components/ProgramPartners";
 import Footer from "../Components/Footer";
@@ -11,6 +12,19 @@ import ThrustAreas from "../Components/ThrustAreas";
 import Facilities from "../Components/Facilities";
 
 const HomePage = () => {
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.hash) {
+      // Small delay to ensure DOM has rendered
+      setTimeout(() => {
+        const el = document.getElementById(location.hash.substring(1));
+        if (el) {
+          el.scrollIntoView({ behavior: "smooth" });
+        }
+      }, 100);
+    }
+  }, [location.hash]);
   return (
     <div className="bg-white dark:bg-[#1a1a1a] overflow-hidden transition-colors duration-300">
       <Navbar />

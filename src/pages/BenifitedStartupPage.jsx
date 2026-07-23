@@ -1,9 +1,9 @@
 import React, { useRef } from 'react';
 import { motion } from 'framer-motion';
-import { 
-  Coffee, Shield, Code, LineChart, Heart, 
-  Shield as Safety, ChevronLeft, ChevronRight 
-  ,Zap,Globe,Box,Server,Smartphone,Cloud,Building,ShoppingBag,Users,Camera
+import {
+  Coffee, Shield, Code, LineChart, Heart,
+  Shield as Safety, ChevronLeft, ChevronRight
+  , Zap, Globe, Box, Server, Smartphone, Cloud, Building, ShoppingBag, Users, Camera
 } from 'lucide-react';
 import logo1 from '../assets/logos/bay.png';
 import logo2 from '../assets/logos/eyw.png';
@@ -40,9 +40,9 @@ const StartupCard = ({ startup }) => (
       </div>
     </div>
     <div className="mb-4 h-28 flex items-center justify-center bg-gray-50 rounded-lg p-2">
-      <img 
-        src={startup.logo} 
-        alt={`${startup.name} logo`} 
+      <img
+        src={startup.logo}
+        alt={`${startup.name} logo`}
         className="w-full h-full object-contain"
       />
     </div>
@@ -187,31 +187,31 @@ const BenifitedStartupPage = () => {
 
   return (
     <>
-    <Navbar />
-    <div className="bg-gradient-to-b from-gray-50 to-white py-16 px-6">
-      <div className="max-w-7xl mx-auto">
-        <div className="text-center">
-        <div className="heading mb-[70px]">
-        <h2 className="flex justify-center font-semibold text-4xl text-black pb-5">
-            Startups
-        </h2>
-        <div className="flex justify-center">
-          <div className="bg-green-500 h-[5px] w-[100px]" />
+      <Navbar />
+      <div className="bg-gradient-to-b from-gray-50 to-white py-16 px-6">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center">
+            <div className="heading mb-[70px]">
+              <h2 className="flex justify-center font-semibold text-4xl text-black pb-5">
+                Startups
+              </h2>
+              <div className="flex justify-center">
+                <div className="bg-green-500 h-[5px] w-[100px]" />
+              </div>
+            </div>
+            <p className="text-gray-600 max-w-2xl mx-auto">
+              Discover our diverse range of innovative startups that are reshaping industries and creating impact.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {startups.map((startup, index) => (
+              <StartupCard key={index} startup={startup} />
+            ))}
+          </div>
         </div>
       </div>
-          <p className="text-gray-600 max-w-2xl mx-auto">
-            Discover our diverse range of innovative startups that are reshaping industries and creating impact.
-          </p>
-        </div>
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {startups.map((startup, index) => (
-            <StartupCard key={index} startup={startup} />
-          ))}
-        </div>
-      </div>
-    </div>
-    <Footer />
+      <Footer />
     </>
   );
 };
